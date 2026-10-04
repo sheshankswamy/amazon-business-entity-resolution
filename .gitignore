@@ -1,0 +1,79 @@
+# ==============================================================================
+# Amazon Business Entity Resolution — Git Ignore Rules
+# ==============================================================================
+
+# Data and large corpus files (15+ GB competition dataset)
+data/
+dataset/
+*.tsv
+*.csv
+*.parquet
+*.jsonl
+
+# Output directories and pipeline artifacts
+output/
+submission/
+submissions/
+experiments/
+logs/
+scratch/
+*.log
+
+# Large compressed archives
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and OS metadata
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pretrained model binary exclusion (with exception for lightweight production V9 model)
+*.joblib
+*.pkl
+*.model
+*.bin
+*.pt
+*.onnx
+
+# Allow the final lightweight production model (2.44 MB)
+!models/v9_india_matcher_37f.joblib
